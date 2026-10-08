@@ -1,5 +1,7 @@
 # RotateFix
 
+[사용 설명서](USER_GUIDE.md) · [배포 파일 확인](https://github.com/john3smith/RotateFix/releases)
+
 선택한 Android 앱이 전면에 표시될 때 화면 방향을 세로로 요청하는 로컬 도구입니다.
 
 ## 주요 기능
