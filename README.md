@@ -1,5 +1,12 @@
 # RotateFix
 
+## HTML 사용 설명서
+
+[기능 소개 · 설치 · 사용법 · 문제 해결 (HTML)](docs/user-guide.html)
+
+HTML 파일을 다운로드한 뒤 브라우저에서 열어 주세요. GitHub 파일 화면에서는 소스가 보일 수 있습니다.
+설명서 기준 버전과 설치 APK/EXE·Release 버전은 다를 수 있으므로 문서의 버전 안내를 확인하세요.
+
 [사용 설명서](USER_GUIDE.md) · [배포 파일 확인](https://github.com/john3smith/RotateFix/releases)
 
 선택한 Android 앱이 전면에 표시될 때 화면 방향을 세로로 요청하는 로컬 도구입니다.
