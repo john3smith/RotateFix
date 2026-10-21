@@ -44,7 +44,7 @@ final class AppListAdapter extends BaseAdapter {
 
     void setSelectedPackages(Set<String> packages) {
         selectedPackages = new HashSet<>(packages);
-        notifyDataSetChanged();
+        applyFilter();
     }
 
     void setQuery(String query) {
@@ -59,6 +59,10 @@ final class AppListAdapter extends BaseAdapter {
                 visibleApps.add(app);
             }
         }
+        // Stable sort keeps the repository's name order within each selection group.
+        visibleApps.sort((left, right) -> Boolean.compare(
+                selectedPackages.contains(right.packageName),
+                selectedPackages.contains(left.packageName)));
         notifyDataSetChanged();
     }
 
