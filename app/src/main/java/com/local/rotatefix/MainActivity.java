@@ -27,6 +27,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashSet;
 import java.util.List;
@@ -110,6 +111,7 @@ public final class MainActivity extends Activity {
         LinearLayout.LayoutParams subtitleParams = wrap();
         subtitleParams.topMargin = dp(2);
         root.addView(subtitle, subtitleParams);
+        StoreInfo.addButton(this, root);
 
         root.addView(buildServicePanel(), marginParams(-1, -2, 0, 18, 0, 0));
 
@@ -338,7 +340,14 @@ public final class MainActivity extends Activity {
             try {
                 Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS,
                         Uri.parse("package:" + getPackageName()));
-                startActivity(intent);
+                new AlertDialog.Builder(this)
+                        .setTitle("시스템 설정 변경 권한 안내")
+                        .setMessage("선택한 앱을 벗어날 때 이전 회전 상태를 복원하기 위해 이 권한을 사용합니다. 권한을 거부하면 회전 복원 기능을 사용할 수 없으며 Android 설정에서 언제든 해제할 수 있습니다.")
+                        .setNegativeButton("취소", null)
+                        .setPositiveButton("동의하고 설정 열기", (dialog, which) -> {
+                            try { startActivity(intent); }
+                            catch (RuntimeException error) { Toast.makeText(this, "설정 화면을 열 수 없습니다.", Toast.LENGTH_SHORT).show(); }
+                        }).show();
                 return;
             } catch (RuntimeException ignored) {
                 // Fall through to the general settings page.

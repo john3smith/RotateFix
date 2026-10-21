@@ -18,7 +18,7 @@
     <string name="guide_accessibility_path">켜는 순서: 설치된 앱 → RotateFix 세로 고정 → 사용(또는 허용)</string>
     <string name="guide_ready">접근성 권한은 전면 앱 확인에, 시스템 설정 권한은 기존 회전 상태 복원에만 사용합니다.</string>
     <string name="accessibility_steps_title">RotateFix 세로 고정 켜기</string>
-    <string name="accessibility_steps_message">접근성 설정이 열리면 아래 순서대로 누르세요.\n\n1. 설치된 앱\n2. RotateFix 세로 고정\n3. 사용 스위치 켜기\n4. 확인 창에서 허용\n\n설정을 마치면 뒤로 가서 RotateFix로 돌아오세요.</string>
+    <string name="accessibility_steps_message">접근성 서비스는 활성 창의 패키지 이름을 확인하기 위해 창 루트 정보에 접근하고 선택한 앱에서 세로 방향을 요청합니다. 화면 글자·입력 내용·스크린샷을 저장하거나 전송하지 않습니다. 권한을 거부하면 자동 세로 고정이 작동하지 않으며 Android 설정에서 언제든 해제할 수 있습니다.\n\n동의하시면 접근성 설정에서 다음 순서로 직접 허용해 주세요.\n1. 설치된 앱\n2. RotateFix 세로 고정\n3. 사용 스위치 켜기\n4. 확인 창에서 허용\n\n설정을 마치면 RotateFix로 돌아오세요.</string>
     <string name="action_open_accessibility_settings">접근성 설정 열기</string>
     <string name="action_cancel">취소</string>
 </resources>
