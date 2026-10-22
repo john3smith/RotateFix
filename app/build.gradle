@@ -16,6 +16,8 @@ android {
 
     buildTypes {
         release {
+            debuggable false
+            signingConfig null
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
@@ -33,3 +35,5 @@ dependencies {
 }
 
 apply from: rootProject.file("gradle/store-release.gradle")
+
+apply from: rootProject.file("gradle/release-safety.gradle")
