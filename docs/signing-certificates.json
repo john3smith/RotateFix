@@ -1,0 +1,8 @@
+{
+  "format": 1,
+  "rotation_min_sdk": 33,
+  "legacy_certificate_sha256": "97a629dccea6d8cc04480c762dd88b8d31c9eba5fc06ba9e95df130fbab01765",
+  "release_certificate_sha256": "2d1193c0ec66ae3159f76177b92bfb7932908b8f55d23e00c29b177e3497e53d",
+  "package": "com.local.rotatefix",
+  "version_introduced": "1.0.3"
+}
